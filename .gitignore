@@ -1,0 +1,23 @@
+# Build output
+build/
+out/
+cmake-build-*/
+compile_commands.json
+
+# Compiler and editor artifacts
+*.o
+*.obj
+*.d
+*.pdb
+*.ilk
+.DS_Store
+.vscode/
+.idea/
+
+# Python caches from helper scripts
+__pycache__/
+*.pyc
+
+# Logs and local state
+*.log
+.local/
