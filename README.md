@@ -1,78 +1,70 @@
-# AI-Assisted Development with GitHub Copilot - C++ Workshop Repository
+# Copilot-Cpp-Workshop
 
-This is the prepared practice repository for the CodeWizard full-day workshop
-for C++ development teams. The workshop teaches GitHub Copilot. C++ is the
-working codebase, not the subject of the course.
+[![Deploy GitHub Pages](https://github.com/nirgeier/Copilot-Cpp-Workshop/actions/workflows/deploy-mkdocs.yml/badge.svg)](https://github.com/nirgeier/Copilot-Cpp-Workshop/actions/workflows/deploy-mkdocs.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/nirgeier/Copilot-Cpp-Workshop?style=social)](https://github.com/nirgeier/Copilot-Cpp-Workshop/stargazers)
 
-The repository is intentionally small and self contained. It builds offline with
-CMake and a C++17 compiler, needs no downloaded packages, and contains a small
-library, a CLI, a benchmark, and a CTest suite with seeded gaps and defects for
-the three hands-on labs.
+Hands-on labs for **AI-Assisted Development with GitHub Copilot**, taught against a small C++17 codebase. GitHub Copilot is the course subject; C++ is the working codebase.
 
-## What is in here
+📘 **[Read the labs on the documentation site](https://nirgeier.github.io/Copilot-Cpp-Workshop/)**
+
+---
+
+## 🚀 What This Repository Contains
 
 | Path | Purpose |
-| --- | --- |
-| `include/edge_inference/`, `src/` | Small inference library with a deterministic reference backend |
+|------|---------|
+| `Labs/` | The MkDocs lab site: setup, foundations, agent mode, multi-agent delivery |
+| `mkdocs/` | Modular MkDocs configuration fragments and shared theme overrides |
+| `mkdocs.yml` | Generated site configuration (concatenation of `mkdocs/01-*.yml` to `06-*.yml`) |
+| `include/edge_inference/`, `src/` | Small C++17 inference library with a deterministic reference backend |
 | `cli/` | Command line tool that runs one input through the inference path |
 | `benchmark/` | Latency benchmark with p50 and p95 reporting |
-| `tests/` | CTest suite with two intentional failures for the labs |
+| `tests/` | Boost.Test suites with two seeded failures for Lab 2 and Lab 3 |
 | `data/` | Valid, boundary, and invalid input samples |
 | `models/` | Notes on the model artifact and the optional ONNX Runtime path |
-| `docs/labs/` | The three lab guides, aligned with the workshop syllabus |
-| `.github/` | Copilot instructions, prompt files, a reviewer agent, and a skill |
+| `.github/` | Copilot instructions, path rules, prompts, reviewer agent, and a skill |
+| `docs/review-checklist.md` | C++ review checklist used by the reviewer agent |
 
-## Quick start
+## 📂 Lab Structure
+
+```
+Labs/
+├── README.md                       Home
+├── 00-Setup/                       Tools, Copilot configuration, baseline verification
+├── 01-Copilot-Foundations/         Alignment, context, agents, Lab 1
+├── 02-Agent-Mode-and-MCP/          Models, agent mode, MCP, Lab 2
+└── 03-Multi-Agent-and-Review/      Orchestration, Lab 3, governance
+```
+
+## 🛠️ Quick Start (C++ Project)
 
 ```bash
 cmake --preset debug
 cmake --build --preset debug
 ctest --preset debug --output-on-failure
 ./build/debug/edge_inference_cli data/valid.json
-./build/debug/edge_benchmark data/valid.json
+./build/debug/edge_benchmark data/valid.json 500
 ```
 
-With a preset-free flow:
+A clean checkout builds successfully, but `preprocessing_tests` and `postprocessing_tests` fail on purpose. They are the starting points for Lab 2 and Lab 3. `model_tests` passes from the start. See `Labs/00-Setup/03-Verify-Environment.md`.
+
+## 📖 Build the Lab Site
 
 ```bash
-cmake -S . -B build/local -DBUILD_TESTING=ON
-cmake --build build/local
-ctest --test-dir build/local --output-on-failure
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r mkdocs/requirements.txt
+cat mkdocs/01-*.yml mkdocs/02-*.yml mkdocs/03-*.yml mkdocs/04-*.yml mkdocs/05-*.yml mkdocs/06-*.yml > mkdocs.yml
+mkdocs serve
 ```
 
-Expect the build to succeed and `preprocessing_tests` and
-`postprocessing_tests` to fail on a clean checkout. Those failures are the
-starting point for Lab 2 and Lab 3. `model_tests` should pass from the start.
-See `docs/setup.md` for the exact list of seeded gaps.
+Or run `./init_site.sh --no-serve` for the automated setup used by the other lab repositories.
 
-## Labs
+## 🔧 Conventions
 
-| Lab | Guide | Outcome |
-| --- | --- | --- |
-| 1 | `docs/labs/lab-1-customize-copilot.md` | A version controlled Copilot customization layer for this repository |
-| 2 | `docs/labs/lab-2-agent-mode-mcp.md` | The preprocessing gap closed and all validation gates green |
-| 3 | `docs/labs/lab-3-multi-agent-review.md` | The seeded argmax defect fixed, tested, and reviewed |
-
-## Definition of done
-
-A change is complete only when all of the following pass:
-
-```bash
-cmake --build --preset debug
-ctest --preset debug --output-on-failure
-cmake --preset sanitizers && cmake --build --preset sanitizers
-ctest --preset sanitizers --output-on-failure
-```
-
-Code review is still a human decision. Treat every Copilot change as a
-proposal and check it against `docs/review-checklist.md`.
-
-## Notes
-
-- No model binary is committed. `models/README.md` explains the reference
-  backend and how to wire in a real ONNX Runtime build.
-- Tests use Boost.Test (header only). Boost headers 1.70 or newer are required.
-- Text in this repository uses ASCII hyphens, never em dashes.
-
-Based on the CodeWizard syllabus `AI-Assisted Development with GitHub Copilot`,
-full day, 09:00-17:00, three hands-on labs.
+- Tests use Boost.Test in header-only mode. Boost headers 1.70 or newer are required.
+- No model binary is committed. See `models/README.md`.
+- No network downloads at CMake configure time.
+- All prose uses ASCII hyphens, never em dashes.
+- Copilot output is a proposal. A human reviewer approves every change.

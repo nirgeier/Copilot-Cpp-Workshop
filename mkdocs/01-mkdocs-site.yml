@@ -1,0 +1,12 @@
+###
+### mkdocs-site.yml
+###
+docs_dir: Labs
+edit_uri:
+repo_name: nirgeier/Copilot-Cpp-Workshop
+repo_url: https://github.com/nirgeier/Copilot-Cpp-Workshop
+site_author: Nir Geier - nirgeier@gmail.com
+site_description: Hands-on labs for AI-Assisted Development with GitHub Copilot for C++ teams
+site_dir: ./mkdocs-site
+site_name: Copilot-Cpp-Workshop
+site_url: https://nirgeier.github.io/Copilot-Cpp-Workshop/
