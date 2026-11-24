@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Run the repository validation gates inside the workshop container.
+set -euo pipefail
+
+cd "${WORKSHOP_DIR:-/work}"
+
+CACHE="build/debug/CMakeCache.txt"
+if [[ -f "$CACHE" ]] && ! grep -q "CMAKE_CACHEFILE_DIR:INTERNAL=$PWD" "$CACHE"; then
+  echo "ERROR: $CACHE was created for a different directory." >&2
+  echo "Remove the host build/ directory before mounting, or run the image" >&2
+  echo "without a volume to use the baked baseline copy." >&2
+  exit 1
+fi
+
+echo "==> configure (debug)"
+cmake --preset debug
+
+echo "==> build (debug)"
+cmake --build --preset debug
+
+echo "==> test (debug) - two seeded failures are expected"
+ctest --preset debug --output-on-failure || true
+
+if [[ "${WORKSHOP_SANITIZERS:-0}" == "1" ]]; then
+  echo "==> configure and build (sanitizers)"
+  cmake --preset sanitizers
+  cmake --build --preset sanitizers
+
+  echo "==> test (sanitizers, capped at 120s)"
+  timeout 120s ctest --preset sanitizers --output-on-failure || true
+fi
+
+echo
+echo "Expected baseline: model_tests passes; preprocessing_tests and"
+echo "postprocessing_tests fail. Those two failures are workshop starting points."

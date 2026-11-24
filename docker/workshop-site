@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Build or serve the MkDocs lab site inside the workshop container.
+set -euo pipefail
+
+cd "${WORKSHOP_DIR:-/work}"
+
+case "${1:-build}" in
+  build)
+    exec mkdocs build --config-file mkdocs.yml
+    ;;
+  serve)
+    exec mkdocs serve --config-file mkdocs.yml --dev-addr 0.0.0.0:8000
+    ;;
+  *)
+    echo "usage: workshop-site [build|serve]" >&2
+    exit 2
+    ;;
+esac

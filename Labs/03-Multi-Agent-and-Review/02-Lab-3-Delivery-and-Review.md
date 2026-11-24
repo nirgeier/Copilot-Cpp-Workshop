@@ -1,43 +1,70 @@
-# 2. Lab 3 - Delivery and Review
+# 2. Delivery and Review
 
 !!! abstract "About this Lab"
-    **Time:** 15:55-16:35 (40 minutes). Fix the seeded argmax defect through a two-agent workflow, review both results, and record what your team should standardize. Issue #3 is your task record.
+    - The argmax defect is defined by a failing test and a two-agent workflow.
+    - Delivery evidence shows what each worker proposed and what a human approved.
+
 
 ## 1. Problem Statement
 
-`argmax` starts its search at index 1. A highest score in class 0 is ignored, so `PostprocessingTest.ArgmaxIncludesFirstClass` fails.
+```mermaid
+flowchart TD
+    IS["Issue #3"] --> O["Human orchestrator"]
+    O --> A["Agent A: coding agent fixes argmax"]
+    O --> B["Agent B: subagent adds class 0 regression test"]
+    A --> R["cpp-reviewer: independent review"]
+    B --> R
+    R -->|findings| O
+    O -->|revise| A
+    R -->|no blocking findings| V["Full CTest and benchmark"]
+    V --> H["Human approves the final diff"]
+```
 
-## 2. Tasks
+- `argmax` starts its search at index 1.
+- A highest score in class 0 is ignored, so `PostprocessingTest.ArgmaxIncludesFirstClass` fails.
 
-- [ ] Delegate the fix to the Copilot coding agent through issue #3, or to a local subagent with a narrow tool scope.
-- [ ] In parallel, use a second subagent to add one regression test where class 0 wins by a small margin.
-- [ ] Request a review using `.github/agents/cpp-reviewer.agent.md` as the checklist.
-- [ ] Check ownership, bounds, integer width, and API stability.
-- [ ] Iterate through review comments and verify the session log or agent trace.
-- [ ] Compare both approaches on correctness, cost, and review effort.
+## Reference
 
-!!! warning "Keep the scope tight"
-    Do not change preprocessing in this lab. Do not weaken the existing test. Treat the empty-input guard as part of the contract.
+### Delivery evidence reference
 
-## 3. Definition of Done
+| Artifact | Where it comes from | Why keep it |
+|----------|---------------------|-------------|
+| Issue #3 | Repository issues | The specification for the task |
+| Agent output | Coding agent pull request or subagent result | What each worker proposed |
+| Review comments | `.github/agents/cpp-reviewer.agent.md` checklist | Independent findings |
+| Session log or trace | Agent run | Shows what the agent actually did |
+| Final diff | Branch | The change a human approves |
+| Test summary and benchmark | CTest and `edge_benchmark` | Behavior evidence |
+
+- Check ownership, bounds, integer width, and API stability before approving.
+- Do not change preprocessing in this lab and do not weaken the existing test.
+- Treat the empty-input guard as part of the contract.
 
 ```sh
-cmake --build --preset debug
 ctest --preset debug --output-on-failure
 ./build/debug/edge_benchmark data/valid.json 2000
 ```
 
-- [ ] The defect is fixed and covered by a regression test.
-- [ ] All three CTest entries pass.
-- [ ] No test was deleted, skipped, or weakened.
-- [ ] A human reviewed and approved the final diff.
+---
 
-## 4. Evidence to Record
+## Example
 
-- The issue and both agent outputs
-- The review comments and the final diff
-- The test summary and benchmark output
-- One decision: which workflow should the team keep
+```text
+Reviewer: cpp-reviewer agent, read only tools
+Diff: src/postprocessing.cpp, tests/test_postprocessing.cpp
+
+Blocking:
+  1. src/postprocessing.cpp:14 - index without a bounds check.
+
+Non-blocking:
+  1. tests/test_postprocessing.cpp:12 - add a constant-input case.
+
+Evidence:
+  cmake --build --preset debug -> pass
+  ctest --preset debug --output-on-failure -> 3/3 pass
+
+Verdict: human approves after the blocking finding is addressed.
+```
 
 ---
 

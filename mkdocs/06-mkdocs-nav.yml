@@ -9,19 +9,66 @@ nav:
       - 1. Install Tools: 00-Setup/01-Install-Tools.md
       - 2. Configure GitHub Copilot: 00-Setup/02-Configure-Copilot.md
       - 3. Verify the Environment: 00-Setup/03-Verify-Environment.md
+      - 4. Workshop Container: 00-Setup/04-Container-Setup.md
   - Copilot Foundations:
       - Foundations (Overview): 01-Copilot-Foundations/README.md
       - 1. Basic Alignment Session: 01-Copilot-Foundations/01-Alignment-Session.md
       - 2. Context Engineering: 01-Copilot-Foundations/02-Context-Engineering.md
       - 3. Custom Agents and Skills: 01-Copilot-Foundations/03-Custom-Agents-and-Skills.md
-      - 4. Lab 1 - Customize Copilot: 01-Copilot-Foundations/04-Lab-1-Customize-Copilot.md
+      - 4. Customize Copilot: 01-Copilot-Foundations/04-Lab-1-Customize-Copilot.md
+      - 5. Agent Skills: 01-Copilot-Foundations/05-Lab-Agent-Skills.md
+      - 6. Custom Agents: 01-Copilot-Foundations/06-Lab-Custom-Agents.md
+      - 7. Choosing the Right Model: 01-Copilot-Foundations/07-Lab-Choosing-the-Right-Model.md
+      - 8. Debugging with Copilot: 01-Copilot-Foundations/08-Lab-Debugging-with-Copilot.md
+      - 9. Reviewing Copilot Usage Internally: 01-Copilot-Foundations/09-Lab-Reviewing-Copilot-Usage-Internally.md
+      - 10. Copilot Code Review: 01-Copilot-Foundations/10-Lab-Copilot-Code-Review.md
+      - 11. Prompt Files and Custom Instructions: 01-Copilot-Foundations/11-Lab-Prompt-Files-and-Custom-Instructions.md
+      - 12. MCP and Connectors: 01-Copilot-Foundations/12-Lab-MCP-and-Connectors.md
+      - 13. Agent Mode and Plan Mode: 01-Copilot-Foundations/13-Lab-Agent-Mode-and-Plan-Mode.md
+      - 14. Subagents and Delegation: 01-Copilot-Foundations/14-Lab-Subagents-and-Delegation.md
+      - 15. Copilot CLI: 01-Copilot-Foundations/15-Lab-Copilot-CLI.md
+      - 16. Hooks and Guardrails: 01-Copilot-Foundations/16-Lab-Hooks-and-Guardrails.md
+      - 17. Spaces and Copilot Memory: 01-Copilot-Foundations/17-Lab-Spaces-and-Copilot-Memory.md
+      - 18. Inline Completions and Chat: 01-Copilot-Foundations/18-Lab-Inline-Completions-and-Chat.md
+      - 19. Official Documentation Map: 01-Copilot-Foundations/19-Official-Documentation-Map.md
+      - 20. Latest Copilot Changes: 01-Copilot-Foundations/20-Latest-Copilot-Changes.md
   - Agent Mode and MCP:
       - Agent Mode (Overview): 02-Agent-Mode-and-MCP/README.md
       - 1. Models, Cost and Governance: 02-Agent-Mode-and-MCP/01-Models-and-Governance.md
       - 2. Agent Mode, Tools and MCP: 02-Agent-Mode-and-MCP/02-Agent-Mode-and-MCP.md
-      - 3. Lab 2 - Plan, Build and Validate: 02-Agent-Mode-and-MCP/03-Lab-2-Plan-Build-Validate.md
+      - 3. Plan, Build and Validate: 02-Agent-Mode-and-MCP/03-Lab-2-Plan-Build-Validate.md
   - Multi-Agent and Review:
       - Multi-Agent (Overview): 03-Multi-Agent-and-Review/README.md
       - 1. Multi-Agent Orchestration: 03-Multi-Agent-and-Review/01-Multi-Agent-Orchestration.md
-      - 2. Lab 3 - Delivery and Review: 03-Multi-Agent-and-Review/02-Lab-3-Delivery-and-Review.md
+      - 2. Delivery and Review: 03-Multi-Agent-and-Review/02-Lab-3-Delivery-and-Review.md
       - 3. Trust, Security and Measurement: 03-Multi-Agent-and-Review/03-Trust-Security-Measurement.md
+  - Tasks:
+      - Tasks (Overview): Tasks/README.md
+      - Setup Tasks:
+          - Task - Build and Verify: Tasks/00-Setup/01-Build-and-Verify.md
+      - Copilot Foundations Tasks:
+          - Task - Ground Context with Instructions and Prompts: Tasks/01-Copilot-Foundations/01-Ground-Context.md
+          - Task - Agent Skills: Tasks/01-Copilot-Foundations/02-Agent-Skills.md
+          - Task - Custom Agents: Tasks/01-Copilot-Foundations/03-Custom-Agents.md
+          - Task - Choosing the Right Model: Tasks/01-Copilot-Foundations/04-Choosing-the-Right-Model.md
+          - Task - Debug with Real Evidence: Tasks/01-Copilot-Foundations/05-Debugging-with-Copilot.md
+          - Task - Review Copilot Usage Internally: Tasks/01-Copilot-Foundations/06-Reviewing-Copilot-Usage.md
+          - Task - Copilot Code Review: Tasks/01-Copilot-Foundations/07-Copilot-Code-Review.md
+          - Task - Prompt Files and Custom Instructions: Tasks/01-Copilot-Foundations/08-Prompt-Files-and-Instructions.md
+          - Task - MCP and Connectors: Tasks/01-Copilot-Foundations/09-MCP-and-Connectors.md
+          - Task - Agent Mode and Plan Mode: Tasks/01-Copilot-Foundations/10-Agent-Mode-and-Plan-Mode.md
+          - Task - Subagents and Delegation: Tasks/01-Copilot-Foundations/11-Subagents-and-Delegation.md
+          - Task - Copilot CLI: Tasks/01-Copilot-Foundations/12-Copilot-CLI.md
+          - Task - Hooks and Guardrails: Tasks/01-Copilot-Foundations/13-Hooks-and-Guardrails.md
+          - Task - Spaces and Copilot Memory: Tasks/01-Copilot-Foundations/14-Spaces-and-Memory.md
+          - Task - Inline Completions and Chat: Tasks/01-Copilot-Foundations/15-Inline-Completions-and-Chat.md
+          - Task - Official Documentation Map: Tasks/01-Copilot-Foundations/16-Official-Documentation-Map.md
+          - Task - Verify the Latest Copilot Changes: Tasks/01-Copilot-Foundations/17-Latest-Copilot-Changes.md
+      - Agent Mode and MCP Tasks:
+          - Task - Configure Agent Guardrails: Tasks/02-Agent-Mode-and-MCP/01-Configure-Guardrails.md
+          - Task - Connect an Approved MCP Server: Tasks/02-Agent-Mode-and-MCP/02-Connect-MCP-Server.md
+      - Multi-Agent and Review Tasks:
+          - Task - Delegate to a Subagent: Tasks/03-Multi-Agent-and-Review/01-Delegate-to-Subagent.md
+          - Task - Run an Independent C++ Review: Tasks/03-Multi-Agent-and-Review/02-Independent-Review.md
+      - Project:
+          - Project - Build a Workshop Repository: Tasks/Project/01-Workshop-Repository.md

@@ -1,7 +1,8 @@
 # 1. Installing Tools
 
 !!! abstract "About this Guide"
-    Install the local toolchain used by every lab. Nothing is downloaded by the CMake configuration: the C++ project uses Boost.Test in header-only mode and needs no model binary or network package at build time.
+    - Install the local toolchain used by every lab.
+    - Nothing is downloaded by the CMake configuration: the C++ project uses Boost.Test in header-only mode and needs no model binary or network package at build time.
 
 ## 1. Install Git and GitHub CLI
 
@@ -37,7 +38,8 @@
         ```
 
     === ":fontawesome-brands-windows: Windows"
-        Install Visual Studio 2022 with the **Desktop development with C++** workload and CMake. Install Boost headers from an approved internal package or vcpkg mirror.
+        - Install Visual Studio 2022 with the **Desktop development with C++** workload and CMake.
+        - Install Boost headers from an approved internal package or vcpkg mirror.
 
     === ":simple-linux: Linux"
         ```sh
@@ -66,13 +68,57 @@ If Boost lives in a non-standard location, configure with `-DBOOST_ROOT=/path/to
 | CMake Tools | Configure, build, and run CTest from the editor |
 
 !!! warning "Organization policy"
-    Install only extensions and features approved for your environment. Copilot must be enabled by your organization before the workshop.
+    - Install only extensions and features approved for your environment.
+    - Copilot must be enabled by your organization before the workshop.
+
+## Reference
+
+### Toolchain reference
+
+The toolchain has four parts. The versions below are minimums used by the labs.
+
+| Component | Minimum | Verify with | Note |
+|-----------|---------|-------------|------|
+| Git | Current release | `git --version` | Branch and issue workflow |
+| GitHub CLI | Current release | `gh --version` | Optional issue context for agents |
+| C++ compiler | C++17 | `cmake --preset debug` | MSVC, GCC, or Clang |
+| CMake and CTest | 3.20 | `cmake --version` | Presets drive every gate |
+| Boost.Test headers | 1.70 | Configure step | Header only, no link step |
+| VS Code extensions | Listed above | Extensions view | Policy approval required |
+
+- Configure with `cmake --preset debug -DBOOST_ROOT=/path/to/boost` when Boost is outside the default search path.
+- CMake configuration downloads nothing. Do not add `FetchContent`, vcpkg, or Conan dependencies without an approved offline mirror.
+- Boost.Test runs in header-only mode, so no compiled Boost library is needed.
+
+!!! note "Platform differences"
+    - Windows uses the Visual Studio 2022 C++ workload and an approved Boost package or vcpkg mirror.
+    - macOS and Linux install Boost headers through the system package manager.
+    - Never install an extension or preview feature that policy has not approved.
+
+---
 
 ## 5. Tools Used
 
 - **Terminal**: all configure, build, and test commands
 - **VS Code**: editing and Copilot interaction
 - **Git and GitHub CLI**: repository and issue workflow
+
+## Example
+
+```text
+$ cmake --version
+cmake version 3.25.1
+
+$ g++ --version | head -1
+g++ (Debian 12.2.0-14+deb12u1) 12.2.0
+
+$ echo '#include <boost/test/unit_test.hpp>' | g++ -x c++ -std=c++17 -fsyntax-only -
+(no output means Boost headers are discoverable)
+
+$ cmake --preset debug
+-- Configuring done
+-- Generating done
+```
 
 ---
 

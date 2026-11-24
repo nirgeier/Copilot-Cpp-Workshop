@@ -27,8 +27,8 @@ theme:
     - navigation.instant.progress
     #- navigation.prune        # Disabled - hides sections when tabs are off
     - navigation.sections
-    #- navigation.tabs          # Disabled - left nav only
-    #- navigation.tabs.sticky   # Disabled - left nav only
+    - navigation.tabs          # Top-level sections as tabs, including Tasks
+    - navigation.tabs.sticky   # Keep tabs visible while scrolling
     #- navigation.top
     - navigation.tracking
     - search.highlight

@@ -1,51 +1,53 @@
-# 4. Lab 1 - Customize Copilot
+# 4. Customize Copilot
 
 !!! abstract "About this Lab"
-    **Time:** 11:35-12:20 (45 minutes). Create a version-controlled Copilot customization layer that reasons correctly about this C++ repository, then produce a plan for Lab 2.
+    - Copilot reads repository instructions, prompts, agents, and skills from fixed locations.
+    - Each customization file has a scope and a constraint that keeps generated changes grounded.
 
-## 1. Starting Point
 
-- A clean checkout that builds, with `model_tests` passing and two seeded failures.
-- The customization files already in `.github/` and `AGENTS.md`.
-- Issue #1 in this repository.
+## Reference
 
-## 2. Tasks
+### Customization change reference
 
-- [ ] Ask Copilot to map the repository: CMake targets, include graph, ownership patterns, Boost.Test suites, and the exact build and test commands.
-- [ ] Review `.github/copilot-instructions.md`. Add missing local facts and remove generic statements.
-- [ ] Extend `.github/instructions/cpp.instructions.md` and `cmake.instructions.md` so generated changes respect the existing conventions.
-- [ ] Use `.github/prompts/plan-implementation.prompt.md` to plan Lab 2. Check every claim against repository files.
-- [ ] Inspect `.github/agents/cpp-reviewer.agent.md` and the skill under `.github/skills/`. Confirm the tool scope is narrow.
-- [ ] Ask the same question before and after customization and record what changed.
+| File | Change it to add | Constraint |
+|------|------------------|------------|
+| `.github/copilot-instructions.md` | Local build commands and C++ rules | Remove generic statements |
+| `.github/instructions/cpp.instructions.md` | Header first, bounds and signedness rules | Keep `applyTo` scoped to C++ files |
+| `.github/instructions/cmake.instructions.md` | Offline C++17 build rules | No `FetchContent` or network downloads |
+| `.github/prompts/plan-implementation.prompt.md` | Evidence sources and output contract | One task per prompt file |
+| `.github/agents/cpp-reviewer.agent.md` | Read-only tool scope | No `edit` in a reviewer |
 
-!!! tip "Good evidence"
-    A useful before-and-after question is: "What does `preprocess` do, and which command proves it?" The after answer should name the real build and test commands without guessing.
+- Every added rule must point to a file, command, or policy that exists here.
+- The Lab 2 plan must name the files to change and the exact validation commands.
 
-## 3. Guardrails
+## Example
 
+A complete prompt file at `.github/prompts/plan-implementation.prompt.md`:
+
+```markdown
+---
+description: Turn an issue into a repository-grounded implementation plan for this C++ project
+---
+
+# Plan an implementation
+
+Issue: ${input:issue_reference}
+
+1. Restate the acceptance criteria in one sentence.
+2. Find the public header and implementation that would change.
+3. Find the test that would prove the change.
+4. List the exact build and test commands from `CMakePresets.json`.
+5. Name open questions. Do not guess answers.
+6. Output: scope, file list, steps, checks, risks, open questions.
+
+## Rules
+
+- Cite a real file path for every repository claim.
+- Do not add dependencies or network downloads.
 - Do not fix the seeded defects in this lab.
-- Do not claim dependencies the repository does not have.
-- Do not add network downloads to CMake.
-- Keep prose in ASCII hyphens, matching the repository convention.
-
-## 4. Definition of Done
-
-```sh
-cmake --build --preset debug
-ctest --preset debug --output-on-failure
+- Keep prose in ASCII hyphens.
 ```
-
-- [ ] Customization files are committed on your lab branch.
-- [ ] Every rule traces to something real in the repository.
-- [ ] The Lab 2 plan names the files to change and the checks to run.
-- [ ] The two seeded failures are still present.
-
-## 5. Evidence to Record
-
-- Before and after answers
-- The customization diff
-- The CTest summary line
 
 ---
 
-**Next:** [Lab 02: Agent Mode and MCP](../02-Agent-Mode-and-MCP/README.md)
+**Next:** [5. Agent Skills](05-Lab-Agent-Skills.md)

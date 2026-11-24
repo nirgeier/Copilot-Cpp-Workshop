@@ -1,6 +1,7 @@
 #include <boost/test/unit_test.hpp>
 
 #include <algorithm>
+#include <cmath>
 #include <vector>
 
 #include "edge_inference/preprocessing.hpp"

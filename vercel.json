@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "python3 -m pip install --disable-pip-version-check --no-cache-dir -r mkdocs/requirements.txt && python3 -m mkdocs build --config-file mkdocs.yml --site-dir mkdocs-site",
+  "outputDirectory": "mkdocs-site",
+  "framework": null
+}

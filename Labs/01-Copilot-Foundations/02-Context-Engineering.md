@@ -1,9 +1,20 @@
 # 2. Context Engineering
 
 !!! abstract "About this Guide"
-    Context engineering is the practice of giving Copilot the smallest sufficient evidence for a task. More context is not always better; deliberate boundaries produce better C++ changes.
+    - Context engineering is the practice of giving Copilot the smallest sufficient evidence for a task.
+    - More context is not always better; deliberate boundaries produce better C++ changes.
 
 ## 1. The Engineer-AI Feedback Loop
+
+```mermaid
+flowchart TD
+    T["Task in one sentence"] --> E["Evidence: files, failing test, compiler output"]
+    E --> D["Inspect the diff line by line"]
+    D --> C["Run build, CTest, sanitizers"]
+    C --> Q{"Matches the intent?"}
+    Q -->|no| E
+    Q -->|yes| R["Refine the prompt with what actually happened"]
+```
 
 1. Define the task in one sentence.
 2. Provide evidence: the exact files, the failing test, the compiler output.
@@ -47,13 +58,57 @@
 - Include the failing Boost.Test output instead of describing the failure.
 
 !!! warning "Context drift"
-    In long sessions, Copilot can lose track of earlier constraints. Refresh context by restating the acceptance criteria and the validation gates before each new task.
+    - In long sessions, Copilot can lose track of earlier constraints.
+    - Refresh context by restating the acceptance criteria and the validation gates before each new task.
+
+## Reference
+
+### Instruction layer reference
+
+Layers combine. Only the repository files are reviewable in a pull request.
+
+| Layer | File or location here | Scope | Frontmatter key |
+|-------|-----------------------|-------|-----------------|
+| Repository instructions | `.github/copilot-instructions.md` | Every interaction here | None |
+| Path instructions | `.github/instructions/*.instructions.md` | `applyTo` globs | `applyTo` |
+| Agent facing rules | `AGENTS.md` | All coding agents | None |
+| Prompt file | `.github/prompts/*.prompt.md` | Invoked task | `description`, `agent`, optional model and tools |
+| Space | Copilot Chat | Curated shared sources | Not a file |
+
+- Put durable project facts in `AGENTS.md`, not tool specific syntax.
+- Keep `applyTo` globs narrow. A broad glob makes a rule apply everywhere.
+
+```yaml
+---
+applyTo: "**/*.cpp, **/*.hpp"
+---
+```
+
+!!! note "Context drift"
+    - Restate acceptance criteria and validation gates before each new task in a long session.
+    - More context is not better. Name the exact files and the failing output.
+
+---
 
 ## 5. Copilot Spaces
 
 - A Space is a curated collection of code, documents, and specifications used as shared team context.
 - Useful for holding the syllabus, the review checklist, and the repository together during a workshop.
 - Treat content in a Space like code: review it and keep it current.
+
+## Example
+
+```markdown
+---
+applyTo: "tests/**"
+---
+
+# Test rules for edge_inference
+
+- Use Boost.Test in header-only mode. Do not add a test framework.
+- Add one assertion that proves the reported behavior.
+- Never delete, skip, or weaken an assertion to get a green run.
+```
 
 ## 6. Summary
 

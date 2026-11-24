@@ -19,7 +19,7 @@
     - Docker and Docker Compose installed on your system
     - No additional setup required
 
-=== "![](assets/images/killercoda-icon.png){:. width-24px} Killercoda"
+=== "![](../images/killercoda-icon.png){:. width-24px} Killercoda"
 
     * The easiest way to get started with the labs
     * Learn in your browser without any local installation
@@ -53,7 +53,7 @@
     - A Unix-like operating system (Linux, macOS, or Windows with WSL)
     - Basic command-line tools
 
-=== "![](assets/images/gcp.png){:.width-24px} Using Google Cloud Shell"
+=== "![](../images/gcp.png){:.width-24px} Using Google Cloud Shell"
 
     - Google Cloud Shell provides a free, browser-based environment with all necessary tools pre-installed.
     - Click on the `Open in Google Cloud Shell` button below:

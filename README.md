@@ -31,7 +31,7 @@ Hands-on labs for **AI-Assisted Development with GitHub Copilot**, taught agains
 ```
 Labs/
 ├── README.md                       Home
-├── 00-Setup/                       Tools, Copilot configuration, baseline verification
+├── 00-Setup/                       Tools, Copilot configuration, baseline verification, container
 ├── 01-Copilot-Foundations/         Alignment, context, agents, Lab 1
 ├── 02-Agent-Mode-and-MCP/          Models, agent mode, MCP, Lab 2
 └── 03-Multi-Agent-and-Review/      Orchestration, Lab 3, governance
@@ -48,6 +48,20 @@ ctest --preset debug --output-on-failure
 ```
 
 A clean checkout builds successfully, but `preprocessing_tests` and `postprocessing_tests` fail on purpose. They are the starting points for Lab 2 and Lab 3. `model_tests` passes from the start. See `Labs/00-Setup/03-Verify-Environment.md`.
+
+## 🐳 Run in a Container
+
+The Dockerfile packages the C++17 toolchain, Boost.Test headers, the pinned MkDocs environment, and GitHub Copilot CLI. No local tool installation is needed.
+
+```bash
+# Pull the published image, or build it locally with: docker build -t copilot-cpp-workshop -f Dockerfile .
+docker pull ghcr.io/nirgeier/copilot-cpp-workshop:latest
+docker run --rm -it -v "$PWD":/work -p 8000:8000 ghcr.io/nirgeier/copilot-cpp-workshop:latest
+```
+
+If the package is private, log in first with `echo "$(gh auth token)" | docker login ghcr.io -u nirgeier --password-stdin`.
+
+Inside the container, run `workshop-verify` for the validation gates, `workshop-site build` or `workshop-site serve` for the docs, and `copilot` for the terminal labs. See `Labs/00-Setup/04-Container-Setup.md` for details and troubleshooting.
 
 ## 📖 Build the Lab Site
 

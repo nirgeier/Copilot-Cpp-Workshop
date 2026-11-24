@@ -672,28 +672,40 @@ build_dynamic_navigation() {
 # Setup Python virtual environment
 #######################################
 setup_python_env() {
-    if [[ -d "$VENV_DIR" ]]; then
+    if [[ -d "$VENV_DIR" && -x "$VENV_DIR/bin/mkdocs" ]]; then
         print_info "Virtual environment found, activating..."
         # shellcheck source=/dev/null
         source "$VENV_DIR/bin/activate"
-    else
-        print_info "Creating new virtual environment..."
-        python3 -m venv "$VENV_DIR"
-        # shellcheck source=/dev/null
-        source "$VENV_DIR/bin/activate"
-
-        print_info "Upgrading pip..."
-        uv pip install --upgrade pip
-
-        if [[ -f "$REQUIREMENTS_FILE" ]]; then
-            print_info "Installing requirements from $REQUIREMENTS_FILE..."
-            uv pip install -r "$REQUIREMENTS_FILE"
-        else
-            print_warning "Requirements file not found: $REQUIREMENTS_FILE"
-        fi
-
-        print_success "Virtual environment created and configured"
+        return 0
     fi
+
+    local python_bin="python3"
+    if command -v python3.14 >/dev/null 2>&1; then
+        python_bin="python3.14"
+    fi
+
+    if [[ -d "$VENV_DIR" ]]; then
+        print_warning "Replacing incomplete virtual environment with ${python_bin}..."
+        rm -rf "$VENV_DIR"
+    else
+        print_info "Creating new virtual environment with ${python_bin}..."
+    fi
+    "$python_bin" -m venv "$VENV_DIR"
+
+    # shellcheck source=/dev/null
+    source "$VENV_DIR/bin/activate"
+
+    print_info "Upgrading pip..."
+    uv pip install --upgrade pip
+
+    if [[ -f "$REQUIREMENTS_FILE" ]]; then
+        print_info "Installing requirements from $REQUIREMENTS_FILE..."
+        uv pip install -r "$REQUIREMENTS_FILE"
+    else
+        print_warning "Requirements file not found: $REQUIREMENTS_FILE"
+    fi
+
+    print_success "Virtual environment created and configured"
 }
 
 #######################################
@@ -731,6 +743,32 @@ deploy_docs() {
 }
 
 #######################################
+# Return the first available TCP port at or above the requested one.
+# Arguments:
+#   $1: preferred port
+#######################################
+find_available_port() {
+    python3 - "$1" <<'PY'
+import socket
+import sys
+
+start = int(sys.argv[1])
+for port in range(start, start + 50):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:
+        sock.bind(("0.0.0.0", port))
+    except OSError:
+        continue
+    finally:
+        sock.close()
+    print(port)
+    break
+else:
+    print(start)
+PY
+}
+
+#######################################
 # Serve MkDocs documentation
 #######################################
 serve_docs() {
@@ -740,11 +778,25 @@ serve_docs() {
     fi
 
     local port="${PORT:-8000}"
+    local available_port
+    available_port=$(find_available_port "$port")
+    if [[ "$available_port" != "$port" ]]; then
+        print_warning "Port ${port} is already in use. Using port ${available_port} instead."
+        port="$available_port"
+    fi
+
     print_info "Starting MkDocs development server on port ${port}..."
     print_info "Press Ctrl+C to stop the server"
 
     # Use exec to replace the current shell process
-    exec mkdocs serve --dev-addr "0.0.0.0:${port}" --watch-theme --watch "${PROJECT_MKDOCS_DIR}"
+    exec mkdocs serve --dev-addr "0.0.0.0:${port}" \
+        --watch-theme \
+        --watch "${PROJECT_MKDOCS_DIR}" \
+        --watch "${PROJECT_ROOT}/src" \
+        --watch "${PROJECT_ROOT}/include" \
+        --watch "${PROJECT_ROOT}/cli" \
+        --watch "${PROJECT_ROOT}/benchmark" \
+        --watch "${PROJECT_ROOT}/tests"
 }
 
 #######################################
