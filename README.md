@@ -6,11 +6,11 @@
 
 Hands-on labs for **AI-Assisted Development with GitHub Copilot**, taught against a small C++17 codebase. GitHub Copilot is the course subject; C++ is the working codebase.
 
-📘 **[Read the labs on the documentation site](https://nirgeier.github.io/Copilot-Cpp-Workshop/)**
+ **[Read the labs on the documentation site](https://nirgeier.github.io/Copilot-Cpp-Workshop/)**
 
 ---
 
-## 🚀 What This Repository Contains
+## What This Repository Contains
 
 | Path | Purpose |
 |------|---------|
@@ -26,7 +26,7 @@ Hands-on labs for **AI-Assisted Development with GitHub Copilot**, taught agains
 | `.github/` | Copilot instructions, path rules, prompts, reviewer agent, and a skill |
 | `docs/review-checklist.md` | C++ review checklist used by the reviewer agent |
 
-## 📂 Lab Structure
+## Lab Structure
 
 ```
 Labs/
@@ -37,7 +37,7 @@ Labs/
 └── 03-Multi-Agent-and-Review/      Orchestration, Lab 3, governance
 ```
 
-## 🛠️ Quick Start (C++ Project)
+## Quick Start (C++ Project)
 
 ```bash
 cmake --preset debug
@@ -49,7 +49,7 @@ ctest --preset debug --output-on-failure
 
 A clean checkout builds successfully, but `preprocessing_tests` and `postprocessing_tests` fail on purpose. They are the starting points for Lab 2 and Lab 3. `model_tests` passes from the start. See `Labs/00-Setup/03-Verify-Environment.md`.
 
-## 🐳 Run in a Container
+## Run in a Container
 
 The Dockerfile packages the C++17 toolchain, Boost.Test headers, the pinned MkDocs environment, and GitHub Copilot CLI. No local tool installation is needed.
 
@@ -63,7 +63,20 @@ If the package is private, log in first with `echo "$(gh auth token)" | docker l
 
 Inside the container, run `workshop-verify` for the validation gates, `workshop-site build` or `workshop-site serve` for the docs, and `copilot` for the terminal labs. See `Labs/00-Setup/04-Container-Setup.md` for details and troubleshooting.
 
-## 📖 Build the Lab Site
+## Mini Project (mini_infer)
+
+A self-contained solution to the capstone task lives in [`mini_infer/`](mini_infer/README.md).
+It contains the C++17 library, CLI, Boost.Test suites, a scripted demo, a dedicated Docker
+image, and a download page with a button and router that serves `solution.zip`.
+
+```bash
+cd mini_infer
+./demo.sh
+docker build -t mini-infer .
+docker run --rm -p 8000:8000 mini-infer serve   # open http://localhost:8000/
+```
+
+## Build the Lab Site
 
 ```bash
 python3 -m venv .venv
@@ -75,7 +88,7 @@ mkdocs serve
 
 Or run `./init_site.sh --no-serve` for the automated setup used by the other lab repositories.
 
-## 🔧 Conventions
+## Conventions
 
 - Tests use Boost.Test in header-only mode. Boost headers 1.70 or newer are required.
 - No model binary is committed. See `models/README.md`.
