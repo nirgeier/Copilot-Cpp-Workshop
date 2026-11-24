@@ -112,9 +112,9 @@ applyTo: "tests/**"
 
 ## 6. Summary
 
-&emsp;✅&emsp;Choose context deliberately and set boundaries<br>
-&emsp;✅&emsp;Explain the difference between repository, path, and agent instructions<br>
-&emsp;✅&emsp;Use a prompt file for a repeatable workflow
+Choose context deliberately and set boundaries<br>
+Explain the difference between repository, path, and agent instructions<br>
+Use a prompt file for a repeatable workflow
 
 ---
 

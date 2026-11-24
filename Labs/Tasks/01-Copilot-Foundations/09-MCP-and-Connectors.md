@@ -169,9 +169,9 @@ No repository code changes are expected.
 
 ## Summary
 
-&emsp;✅&emsp;Map MCP configuration to the surface in use<br>
-&emsp;✅&emsp;Grant the smallest tool set for the task<br>
-&emsp;✅&emsp;Treat tool output as untrusted data
+Map MCP configuration to the surface in use<br>
+Grant the smallest tool set for the task<br>
+Treat tool output as untrusted data
 ## Solution
 
 <details class="note" markdown="1">

@@ -88,9 +88,9 @@ Expected state: both seeded failures are still present.
 
 ## 7. Summary
 
-&emsp;✅&emsp;Give each subagent one question and one output contract<br>
-&emsp;✅&emsp;Compare results with repository evidence<br>
-&emsp;✅&emsp;Keep the final decision with the human orchestrator
+Give each subagent one question and one output contract<br>
+Compare results with repository evidence<br>
+Keep the final decision with the human orchestrator
 
 ## Solution
 

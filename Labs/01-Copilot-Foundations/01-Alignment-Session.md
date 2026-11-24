@@ -158,9 +158,9 @@ Without the attachments, the answer names no real file and guesses a command.
 
 ## 8. Summary
 
-&emsp;✅&emsp;Identify the right Copilot surface for a task<br>
-&emsp;✅&emsp;Explain what context Copilot sees in this repository<br>
-&emsp;✅&emsp;Use checkpoints and history to keep changes reviewable
+Identify the right Copilot surface for a task<br>
+Explain what context Copilot sees in this repository<br>
+Use checkpoints and history to keep changes reviewable
 
 ---
 

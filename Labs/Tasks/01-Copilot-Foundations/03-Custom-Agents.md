@@ -178,9 +178,9 @@ Expected state: the defect assigned by issue #1 is fixed and its test passes. Th
 
 ## Summary
 
-&emsp;✅&emsp;Remove write access from the reviewer role<br>
-&emsp;✅&emsp;Define a read only planner with an output contract<br>
-&emsp;✅&emsp;Run a three role handoff with evidence at each step
+Remove write access from the reviewer role<br>
+Define a read only planner with an output contract<br>
+Run a three role handoff with evidence at each step
 ## Solution
 
 <details class="note" markdown="1">

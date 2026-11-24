@@ -130,9 +130,9 @@ Record the CTest summary line and note which tests you expected to pass.
 
 ## Summary
 
-&emsp;✅&emsp;Research in plan mode before any edits<br>
-&emsp;✅&emsp;Verify plan claims against real files<br>
-&emsp;✅&emsp;Steer agent mode with approvals and bounded scope
+Research in plan mode before any edits<br>
+Verify plan claims against real files<br>
+Steer agent mode with approvals and bounded scope
 ## Solution
 
 <details class="note" markdown="1">

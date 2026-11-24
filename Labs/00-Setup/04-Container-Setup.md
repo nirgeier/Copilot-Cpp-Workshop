@@ -185,8 +185,8 @@ postprocessing_tests fail. Those two failures are workshop starting points.
 
 ## 10. Summary
 
-&emsp;✅&emsp;Build and run a reproducible workshop container<br>
-&emsp;✅&emsp;Use a mounted checkout for persistent lab work<br>
-&emsp;✅&emsp;Run C++ gates, site tooling, and Copilot CLI without local installs
+Build and run a reproducible workshop container<br>
+Use a mounted checkout for persistent lab work<br>
+Run C++ gates, site tooling, and Copilot CLI without local installs
 
 **Back:** [Lab 00 overview](README.md)

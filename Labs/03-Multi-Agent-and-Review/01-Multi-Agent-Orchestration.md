@@ -386,9 +386,9 @@ Rules: do not edit, state clearly when evidence is missing.
 
 ## 7. Summary
 
-&emsp;✅&emsp;Choose a pattern that fits the task<br>
-&emsp;✅&emsp;Scope a subagent's context and expected output<br>
-&emsp;✅&emsp;Prepare the cloud agent environment for C++ builds
+Choose a pattern that fits the task<br>
+Scope a subagent's context and expected output<br>
+Prepare the cloud agent environment for C++ builds
 
 ---
 

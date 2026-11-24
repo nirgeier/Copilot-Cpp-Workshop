@@ -129,9 +129,9 @@ No repository code changes are expected.
 
 ## Summary
 
-&emsp;✅&emsp;Trace a lab claim to an official article<br>
-&emsp;✅&emsp;Check client, version, and plan support<br>
-&emsp;✅&emsp;Record a verdict and make the smallest correction
+Trace a lab claim to an official article<br>
+Check client, version, and plan support<br>
+Record a verdict and make the smallest correction
 ## Solution
 
 <details class="note" markdown="1">

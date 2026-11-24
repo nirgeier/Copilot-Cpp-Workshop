@@ -132,9 +132,9 @@ No C++ changes are expected unless you added a repository instruction file.
 
 ## Summary
 
-&emsp;✅&emsp;Use Spaces for shared, synced context<br>
-&emsp;✅&emsp;Keep durable rules in version controlled files<br>
-&emsp;✅&emsp;Use Memory for preferences, not review
+Use Spaces for shared, synced context<br>
+Keep durable rules in version controlled files<br>
+Use Memory for preferences, not review
 ## Solution
 
 <details class="note" markdown="1">

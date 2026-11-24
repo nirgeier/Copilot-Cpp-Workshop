@@ -209,9 +209,9 @@ No C++ changes are expected. The two seeded failures remain.
 
 ## Summary
 
-&emsp;✅&emsp;Verify November 2026 Copilot changes against your tenant<br>
-&emsp;✅&emsp;Record models, connectors, and review controls with evidence<br>
-&emsp;✅&emsp;Turn each workshop gap into an owned update
+Verify November 2026 Copilot changes against your tenant<br>
+Record models, connectors, and review controls with evidence<br>
+Turn each workshop gap into an owned update
 
 ## Solution
 

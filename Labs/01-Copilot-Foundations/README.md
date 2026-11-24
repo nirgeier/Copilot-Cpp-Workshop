@@ -5,10 +5,10 @@
 
 ## Lab Contents
 
-&emsp;:books:&emsp;[1. Basic Alignment Session](01-Alignment-Session.md){class="white-text"}<br>
-&emsp;:mag:&emsp;[2. Context Engineering](02-Context-Engineering.md){class="white-text"}<br>
-&emsp;[3. Custom Agents and Skills](03-Custom-Agents-and-Skills.md){class="white-text"}<br>
-&emsp;:trophy:&emsp;[4. Customize Copilot](04-Lab-1-Customize-Copilot.md){class="white-text"}
+[1. Basic Alignment Session](01-Alignment-Session.md){class="white-text"}<br>
+[2. Context Engineering](02-Context-Engineering.md){class="white-text"}<br>
+[3. Custom Agents and Skills](03-Custom-Agents-and-Skills.md){class="white-text"}<br>
+[4. Customize Copilot](04-Lab-1-Customize-Copilot.md){class="white-text"}
 
 ## Feature Labs
 
@@ -39,11 +39,11 @@
 
 By completing this lab you will be able to:
 
-&emsp;✅&emsp;Name the Copilot surfaces and choose the right one for each task<br>
-&emsp;✅&emsp;Supply grounded context with files, symbols, build output, and tests<br>
-&emsp;✅&emsp;Layer repository instructions, path rules, prompt files, agents, and skills<br>
-&emsp;✅&emsp;Produce a plan that is supported by evidence in the repository<br>
-&emsp;✅&emsp;Compare Copilot answers before and after customization<br>
-&emsp;✅&emsp;Build and use an agent skill and a scoped custom agent<br>
-&emsp;✅&emsp;Choose a model and explain its cost and policy constraints<br>
-&emsp;✅&emsp;Debug, review, and measure Copilot work with evidence
+Name the Copilot surfaces and choose the right one for each task<br>
+Supply grounded context with files, symbols, build output, and tests<br>
+Layer repository instructions, path rules, prompt files, agents, and skills<br>
+Produce a plan that is supported by evidence in the repository<br>
+Compare Copilot answers before and after customization<br>
+Build and use an agent skill and a scoped custom agent<br>
+Choose a model and explain its cost and policy constraints<br>
+Debug, review, and measure Copilot work with evidence

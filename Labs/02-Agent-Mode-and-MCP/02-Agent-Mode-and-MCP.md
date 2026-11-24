@@ -118,9 +118,9 @@ task. Add a PAT and toolset header only if your approved workflow requires it.
 
 ## 6. Summary
 
-&emsp;✅&emsp;Approve a plan before edits<br>
-&emsp;✅&emsp;Use real build and test output as feedback<br>
-&emsp;✅&emsp;Configure MCP under least privilege
+Approve a plan before edits<br>
+Use real build and test output as feedback<br>
+Configure MCP under least privilege
 
 ---
 

@@ -200,9 +200,9 @@ ctest --preset debug --output-on-failure
 
 ## Summary
 
-&emsp;✅&emsp;Use hooks for enforced rules, not requested rules<br>
-&emsp;✅&emsp;Deny dangerous tool calls in `preToolUse`<br>
-&emsp;✅&emsp;Keep hooks fast, local, and reviewed
+Use hooks for enforced rules, not requested rules<br>
+Deny dangerous tool calls in `preToolUse`<br>
+Keep hooks fast, local, and reviewed
 ## Solution
 
 <details class="note" markdown="1">

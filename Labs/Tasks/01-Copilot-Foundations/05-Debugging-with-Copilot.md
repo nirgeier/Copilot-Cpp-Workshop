@@ -233,9 +233,9 @@ ctest --preset debug --output-on-failure
 
 ## Summary
 
-&emsp;✅&emsp;Debug from exact output, not a description<br>
-&emsp;✅&emsp;Prove a cause before editing and add a focused test<br>
-&emsp;✅&emsp;Close with review checklist and sanitizer evidence
+Debug from exact output, not a description<br>
+Prove a cause before editing and add a focused test<br>
+Close with review checklist and sanitizer evidence
 ## Solution
 
 <details class="note" markdown="1">

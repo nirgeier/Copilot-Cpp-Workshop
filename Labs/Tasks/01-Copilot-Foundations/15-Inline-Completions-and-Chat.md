@@ -141,9 +141,9 @@ ctest --preset debug --output-on-failure
 
 ## Summary
 
-&emsp;✅&emsp;Use completion for local patterns and chat for grounded questions<br>
-&emsp;✅&emsp;Attach the smallest sufficient evidence<br>
-&emsp;✅&emsp;Review every suggestion against the C++ checklist
+Use completion for local patterns and chat for grounded questions<br>
+Attach the smallest sufficient evidence<br>
+Review every suggestion against the C++ checklist
 ## Solution
 
 <details class="note" markdown="1">

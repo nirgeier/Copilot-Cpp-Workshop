@@ -94,9 +94,9 @@ Replace the placeholder IDs with models from your organization picker.
 
 ## 5. Summary
 
-&emsp;✅&emsp;Match model capability to task difficulty<br>
-&emsp;✅&emsp;Explain premium request cost and multipliers<br>
-&emsp;✅&emsp;State which policies constrain model and tool choice
+Match model capability to task difficulty<br>
+Explain premium request cost and multipliers<br>
+State which policies constrain model and tool choice
 
 ---
 

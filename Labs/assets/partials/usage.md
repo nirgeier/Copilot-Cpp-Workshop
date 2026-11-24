@@ -5,7 +5,7 @@
 - There are several ways to run the Copilot-Cpp-Workshop Labs.
 - Choose the method that works best for you.
 
-=== "🐳 Docker (Recommended)"
+=== " Docker (Recommended)"
 
     Using Docker is the easiest way to get started locally with the labs:
 
@@ -24,7 +24,7 @@
     * The easiest way to get started with the labs
     * Learn in your browser without any local installation
 
-    🌐 <a href="https://killercoda.com/codewizard/scenario/CopilotCppWorkshop" target="_blank">**Launch on Killercoda**</a>
+     <a href="https://killercoda.com/codewizard/scenario/CopilotCppWorkshop" target="_blank">**Launch on Killercoda**</a>
 
       **Benefits:**
 
@@ -33,7 +33,7 @@
       - Works on any device with a web browser
       - All tools pre-installed
 
-=== "📜 From Source"
+=== " From Source"
 
     For those who prefer to run it directly on their machine:
 

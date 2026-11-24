@@ -121,9 +121,9 @@ Task: ${input:test_name}
 
 ## 4. Summary
 
-&emsp;✅&emsp;Distinguish automatic instructions from invoked prompt files<br>
-&emsp;✅&emsp;Name each customization primitive and when it loads<br>
-&emsp;✅&emsp;Keep path rules narrow and facts in `AGENTS.md`<br>
-&emsp;✅&emsp;Write a prompt file with evidence sources and an output contract
+Distinguish automatic instructions from invoked prompt files<br>
+Name each customization primitive and when it loads<br>
+Keep path rules narrow and facts in `AGENTS.md`<br>
+Write a prompt file with evidence sources and an output contract
 
 **Next:** [12. MCP and Connectors](12-Lab-MCP-and-Connectors.md)

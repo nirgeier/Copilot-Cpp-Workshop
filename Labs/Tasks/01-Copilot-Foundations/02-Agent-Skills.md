@@ -159,9 +159,9 @@ ctest --preset debug --output-on-failure
 
 ## Summary
 
-&emsp;✅&emsp;Inspect a shipped skill and map it to repository files<br>
-&emsp;✅&emsp;Author a scoped skill with a precise description<br>
-&emsp;✅&emsp;Demonstrate selective loading with two prompt excerpts
+Inspect a shipped skill and map it to repository files<br>
+Author a scoped skill with a precise description<br>
+Demonstrate selective loading with two prompt excerpts
 ## Solution
 
 <details class="note" markdown="1">

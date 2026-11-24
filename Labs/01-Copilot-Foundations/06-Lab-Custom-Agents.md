@@ -101,9 +101,9 @@ Output: scope, file list, steps, checks, risks.
 
 ## 3. Summary
 
-&emsp;✅&emsp;Define a role with a narrow tool set<br>
-&emsp;✅&emsp;Distinguish an agent profile from a subagent<br>
-&emsp;✅&emsp;Run a plan, implement, review handoff with evidence at each step
+Define a role with a narrow tool set<br>
+Distinguish an agent profile from a subagent<br>
+Run a plan, implement, review handoff with evidence at each step
 
 ---
 

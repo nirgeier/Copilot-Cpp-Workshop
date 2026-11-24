@@ -169,8 +169,8 @@ $ copilot
 
 ## 6. Summary
 
-&emsp;✅&emsp;Start a CLI session with explicit trust and approval choices<br>
-&emsp;✅&emsp;Use `@` context, plan mode, and `/review` in the terminal<br>
-&emsp;✅&emsp;Keep CLI customization separate from IDE and cloud configuration
+Start a CLI session with explicit trust and approval choices<br>
+Use `@` context, plan mode, and `/review` in the terminal<br>
+Keep CLI customization separate from IDE and cloud configuration
 
 **Next:** [16. Hooks and Guardrails](16-Lab-Hooks-and-Guardrails.md)

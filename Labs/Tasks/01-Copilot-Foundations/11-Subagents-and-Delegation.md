@@ -138,9 +138,9 @@ No repository code changes are expected in this task.
 
 ## Summary
 
-&emsp;✅&emsp;Enable and invoke a subagent with a handoff contract<br>
-&emsp;✅&emsp;Use separate context for parallel read only work<br>
-&emsp;✅&emsp;Treat a second opinion as a challenge, not approval
+Enable and invoke a subagent with a handoff contract<br>
+Use separate context for parallel read only work<br>
+Treat a second opinion as a challenge, not approval
 ## Solution
 
 <details class="note" markdown="1">

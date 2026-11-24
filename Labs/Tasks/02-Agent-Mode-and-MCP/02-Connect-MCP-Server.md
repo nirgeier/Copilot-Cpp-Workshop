@@ -91,9 +91,9 @@ ctest --preset debug --output-on-failure
 
 ## 8. Summary
 
-&emsp;✅&emsp;Check policy before connecting any tool server<br>
-&emsp;✅&emsp;Use least privilege and read-only toolsets<br>
-&emsp;✅&emsp;Treat every tool result as untrusted data
+Check policy before connecting any tool server<br>
+Use least privilege and read-only toolsets<br>
+Treat every tool result as untrusted data
 
 ## Solution
 

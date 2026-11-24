@@ -107,8 +107,8 @@ through the approved store, never in the file.
 
 ## 4. Summary
 
-&emsp;✅&emsp;Explain what MCP adds and where each configuration lives<br>
-&emsp;✅&emsp;Distinguish connectors, personal servers, and repository servers<br>
-&emsp;✅&emsp;Grant the smallest tool set and assume tool output is untrusted
+Explain what MCP adds and where each configuration lives<br>
+Distinguish connectors, personal servers, and repository servers<br>
+Grant the smallest tool set and assume tool output is untrusted
 
 **Next:** [13. Agent Mode and Plan Mode](13-Lab-Agent-Mode-and-Plan-Mode.md)

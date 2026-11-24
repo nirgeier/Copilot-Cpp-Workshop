@@ -103,9 +103,9 @@ Expected state: the same two seeded failures as in the setup task.
 
 ## 7. Summary
 
-&emsp;✅&emsp;Inventory the instructions and prompts already in the repository<br>
-&emsp;✅&emsp;Add a scoped rule and a selectable prompt file<br>
-&emsp;✅&emsp;Compare answers using repository evidence
+Inventory the instructions and prompts already in the repository<br>
+Add a scoped rule and a selectable prompt file<br>
+Compare answers using repository evidence
 
 ## Solution
 

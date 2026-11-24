@@ -332,9 +332,9 @@ For most events, exit code `2` is a warning and the run continues. For `preToolU
 
 ## 12. Summary
 
-&emsp;✅&emsp;Explain what a hook is and which lifecycle event fires it<br>
-&emsp;✅&emsp;Choose a hook when a rule must be enforced, not requested<br>
-&emsp;✅&emsp;Use `preToolUse` for allow and deny decisions and `postToolUse` for context and audit<br>
-&emsp;✅&emsp;Keep hooks fast, quiet about secrets, and reviewed
+Explain what a hook is and which lifecycle event fires it<br>
+Choose a hook when a rule must be enforced, not requested<br>
+Use `preToolUse` for allow and deny decisions and `postToolUse` for context and audit<br>
+Keep hooks fast, quiet about secrets, and reviewed
 
 **Next:** [17. Spaces and Copilot Memory](17-Lab-Spaces-and-Copilot-Memory.md)

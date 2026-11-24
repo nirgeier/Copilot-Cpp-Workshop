@@ -268,8 +268,8 @@ ctest --preset debug --output-on-failure
 
 ## 12. Summary
 
-&emsp;✅&emsp;Name the November 2026 Copilot releases and their status<br>
-&emsp;✅&emsp;Map each release item to the lab that should teach it<br>
-&emsp;✅&emsp;Distinguish general availability from public preview in your notes
+Name the November 2026 Copilot releases and their status<br>
+Map each release item to the lab that should teach it<br>
+Distinguish general availability from public preview in your notes
 
 **Back:** [Foundations overview](README.md) and [Documentation map](19-Official-Documentation-Map.md)

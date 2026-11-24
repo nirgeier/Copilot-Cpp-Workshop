@@ -110,8 +110,8 @@ and docs/review-checklist.md. Every claim was checked against the source.
 
 ## 3. Summary
 
-&emsp;✅&emsp;Use Spaces for shared, synced context that outlives chat<br>
-&emsp;✅&emsp;Keep durable project rules in version controlled files<br>
-&emsp;✅&emsp;Use Memory for preferences, not as a substitute for review
+Use Spaces for shared, synced context that outlives chat<br>
+Keep durable project rules in version controlled files<br>
+Use Memory for preferences, not as a substitute for review
 
 **Next:** [18. Inline Completions and Chat](18-Lab-Inline-Completions-and-Chat.md)

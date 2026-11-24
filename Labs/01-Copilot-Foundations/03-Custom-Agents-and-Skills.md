@@ -126,9 +126,9 @@ description: Verify that a proposed C++ change uses only APIs that exist in this
 
 ## 6. Summary
 
-&emsp;✅&emsp;Choose between instructions, prompts, agents, and skills deliberately<br>
-&emsp;✅&emsp;Scope an agent's tools to its role<br>
-&emsp;✅&emsp;Package a repeatable C++ procedure as a skill
+Choose between instructions, prompts, agents, and skills deliberately<br>
+Scope an agent's tools to its role<br>
+Package a repeatable C++ procedure as a skill
 
 ---
 

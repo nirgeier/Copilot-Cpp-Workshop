@@ -311,8 +311,8 @@ ctest --preset sanitizers --output-on-failure
 
 ## 8. Summary
 
-&emsp;✅&emsp;Create a buildable C++ repository from scratch with presets and tests<br>
-&emsp;✅&emsp;Use the customization layer to write and review code with AI<br>
-&emsp;✅&emsp;Prove that skills, hooks, agents, and least privilege tools work as intended
+Create a buildable C++ repository from scratch with presets and tests<br>
+Use the customization layer to write and review code with AI<br>
+Prove that skills, hooks, agents, and least privilege tools work as intended
 
 **Back:** [Tasks (Overview)](../README.md)

@@ -237,9 +237,9 @@ state the policy constraint, and name the cost signal to record.
 
 ## 5. Summary
 
-&emsp;✅&emsp;Explain Auto, tiers, Fusion, and manual pinning<br>
-&emsp;✅&emsp;Match model capability to task difficulty with evidence<br>
-&emsp;✅&emsp;State the policy and budget constraints on model choice
+Explain Auto, tiers, Fusion, and manual pinning<br>
+Match model capability to task difficulty with evidence<br>
+State the policy and budget constraints on model choice
 
 ---
 

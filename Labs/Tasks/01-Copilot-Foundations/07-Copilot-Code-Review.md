@@ -135,9 +135,9 @@ ctest --preset debug --output-on-failure
 
 ## Summary
 
-&emsp;✅&emsp;Classify review comments instead of accepting them<br>
-&emsp;✅&emsp;Choose effort from risk and document the reason<br>
-&emsp;✅&emsp;Keep human approval and workflow approval explicit
+Classify review comments instead of accepting them<br>
+Choose effort from risk and document the reason<br>
+Keep human approval and workflow approval explicit
 ## Solution
 
 <details class="note" markdown="1">

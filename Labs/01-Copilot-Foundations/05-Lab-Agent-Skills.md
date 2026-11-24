@@ -118,9 +118,9 @@ description: Triage a failing CTest case in the edge_inference C++ repository. U
 
 ## 4. Summary
 
-&emsp;✅&emsp;Explain what a skill is and where Copilot loads it from<br>
-&emsp;✅&emsp;Write a `SKILL.md` with a precise description and grounded procedure<br>
-&emsp;✅&emsp;Keep tool permissions narrow and verify loading with evidence
+Explain what a skill is and where Copilot loads it from<br>
+Write a `SKILL.md` with a precise description and grounded procedure<br>
+Keep tool permissions narrow and verify loading with evidence
 
 ---
 

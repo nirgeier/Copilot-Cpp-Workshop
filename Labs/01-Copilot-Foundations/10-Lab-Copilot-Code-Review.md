@@ -159,8 +159,8 @@ Pay particular attention to ownership, bounds, signedness, and weakened tests.
 
 ## 4. Summary
 
-&emsp;✅&emsp;Request and classify Copilot code review comments<br>
-&emsp;✅&emsp;Choose an effort level from risk, not habit<br>
-&emsp;✅&emsp;Keep human review and workflow approval explicit
+Request and classify Copilot code review comments<br>
+Choose an effort level from risk, not habit<br>
+Keep human review and workflow approval explicit
 
 **Next:** [11. Prompt Files and Custom Instructions](11-Lab-Prompt-Files-and-Custom-Instructions.md)

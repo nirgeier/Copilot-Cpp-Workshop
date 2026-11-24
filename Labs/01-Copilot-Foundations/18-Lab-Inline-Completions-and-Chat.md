@@ -83,8 +83,8 @@ Grounded chat: same question plus
 
 ## 4. Summary
 
-&emsp;✅&emsp;Choose completion for local patterns and chat for grounded questions<br>
-&emsp;✅&emsp;Attach the smallest sufficient evidence<br>
-&emsp;✅&emsp;Review every suggestion against the C++ checklist
+Choose completion for local patterns and chat for grounded questions<br>
+Attach the smallest sufficient evidence<br>
+Review every suggestion against the C++ checklist
 
 **Back:** [Foundations overview](README.md) and **Next:** [Lab 02 overview](../02-Agent-Mode-and-MCP/README.md)

@@ -79,8 +79,8 @@ Output: at most three blocking findings, each with file and line. Do not edit.
 
 ## 3. Summary
 
-&emsp;✅&emsp;Describe a subagent and when delegation helps<br>
-&emsp;✅&emsp;Enable and invoke a subagent with a handoff contract<br>
-&emsp;✅&emsp;Use a second opinion without treating it as approval
+Describe a subagent and when delegation helps<br>
+Enable and invoke a subagent with a handoff contract<br>
+Use a second opinion without treating it as approval
 
 **Next:** [15. Copilot CLI](15-Lab-Copilot-CLI.md)

@@ -135,9 +135,9 @@ No C++ changes are expected if you did not implement the plan.
 
 ## Summary
 
-&emsp;✅&emsp;Start CLI sessions with narrow trust<br>
-&emsp;✅&emsp;Use `@` context, plan mode, and `/review` deliberately<br>
-&emsp;✅&emsp;Keep saved approvals out of destructive commands
+Start CLI sessions with narrow trust<br>
+Use `@` context, plan mode, and `/review` deliberately<br>
+Keep saved approvals out of destructive commands
 ## Solution
 
 <details class="note" markdown="1">

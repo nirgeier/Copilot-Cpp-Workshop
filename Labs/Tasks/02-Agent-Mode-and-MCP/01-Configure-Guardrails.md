@@ -89,9 +89,9 @@ ctest --preset debug --output-on-failure
 
 ## 8. Summary
 
-&emsp;✅&emsp;Keep approval checkpoints on during agent work<br>
-&emsp;✅&emsp;Use keep and undo to inspect a proposed edit<br>
-&emsp;✅&emsp;Ground the agent with real test output
+Keep approval checkpoints on during agent work<br>
+Use keep and undo to inspect a proposed edit<br>
+Ground the agent with real test output
 
 ## Solution
 

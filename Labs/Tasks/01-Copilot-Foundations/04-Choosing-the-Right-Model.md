@@ -310,9 +310,9 @@ No C++ file changes are expected in this task.
 
 ## Summary
 
-&emsp;✅&emsp;Compare Auto and pinned models on identical inputs<br>
-&emsp;✅&emsp;Verify answers against real files and commands<br>
-&emsp;✅&emsp;Write a team rule grounded in capability and cost
+Compare Auto and pinned models on identical inputs<br>
+Verify answers against real files and commands<br>
+Write a team rule grounded in capability and cost
 
 ## Solution
 

@@ -173,9 +173,9 @@ Expected state: two seeded failures and one passing `model_tests`.
 
 ## Summary
 
-&emsp;✅&emsp;Inventory instruction layers before adding a rule<br>
-&emsp;✅&emsp;Add a scoped rule and an invokable prompt file<br>
-&emsp;✅&emsp;Prove the effect with a before and after comparison
+Inventory instruction layers before adding a rule<br>
+Add a scoped rule and an invokable prompt file<br>
+Prove the effect with a before and after comparison
 ## Solution
 
 <details class="note" markdown="1">

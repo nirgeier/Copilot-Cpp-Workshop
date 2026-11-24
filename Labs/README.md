@@ -6,7 +6,7 @@
 
 ---
 
-## 🚀 Lab Series
+## Lab Series
 
 ```mermaid
 flowchart TD
@@ -23,20 +23,20 @@ flowchart TD
 | 002 | [Agent Mode and MCP](./02-Agent-Mode-and-MCP/README.md)         | Models, agent mode, MCP, Lab 2                                                                                                                                          |
 | 003 | [Multi-Agent and Review](./03-Multi-Agent-and-Review/README.md) | Subagents, coding agent, AI code review, Lab 3                                                                                                                          |
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
-&emsp;✅&emsp;Use Copilot surfaces deliberately: completion, chat, Edit, Agent, and Plan<br>
-&emsp;✅&emsp;Engineer context with instructions, `AGENTS.md`, and prompt files<br>
-&emsp;✅&emsp;Build custom agents and Agent Skills for a C++ team workflow<br>
-&emsp;✅&emsp;Select models and drive agent mode with validation gates<br>
-&emsp;✅&emsp;Extend Copilot with MCP under least-privilege access<br>
-&emsp;✅&emsp;Orchestrate multi-agent delivery and review generated C++ diffs<br>
-&emsp;✅&emsp;Measure, govern, and keep a human in the loop<br>
-&emsp;✅&emsp;Use agent skills, custom agents, prompt files, and hooks for repeatable work<br>
-&emsp;✅&emsp;Debug with real build output and review Copilot generated diffs and pull requests<br>
-&emsp;✅&emsp;Review adoption, credits, and policy changes from administrator views
+Use Copilot surfaces deliberately: completion, chat, Edit, Agent, and Plan<br>
+Engineer context with instructions, `AGENTS.md`, and prompt files<br>
+Build custom agents and Agent Skills for a C++ team workflow<br>
+Select models and drive agent mode with validation gates<br>
+Extend Copilot with MCP under least-privilege access<br>
+Orchestrate multi-agent delivery and review generated C++ diffs<br>
+Measure, govern, and keep a human in the loop<br>
+Use agent skills, custom agents, prompt files, and hooks for repeatable work<br>
+Debug with real build output and review Copilot generated diffs and pull requests<br>
+Review adoption, credits, and policy changes from administrator views
 
-## 🧩 The Starter Repository
+## The Starter Repository
 
 The code next to this site is the prepared workshop repository:
 
@@ -54,7 +54,7 @@ The code next to this site is the prepared workshop repository:
     - Those failures are the starting points for Lab 2 and Lab 3.
     - `model_tests` passes from the start.
 
-## 📁 How to Use These Labs
+## How to Use These Labs
 
 1. Start with **Lab 000** and verify your local environment.
 2. Work through the labs in order. Each lab folder has an overview page and numbered steps.

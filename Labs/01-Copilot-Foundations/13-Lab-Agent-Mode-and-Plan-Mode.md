@@ -73,8 +73,8 @@ CMakePresets.json, and state open questions. Do not edit anything.
 
 ## 2. Summary
 
-&emsp;✅&emsp;Use plan mode to research before any file changes<br>
-&emsp;✅&emsp;Steer agent mode with approvals, checkpoints, and bounded scope<br>
-&emsp;✅&emsp;Close with the repository validation gates and a diff review
+Use plan mode to research before any file changes<br>
+Steer agent mode with approvals, checkpoints, and bounded scope<br>
+Close with the repository validation gates and a diff review
 
 **Next:** [14. Subagents and Delegation](14-Lab-Subagents-and-Delegation.md)

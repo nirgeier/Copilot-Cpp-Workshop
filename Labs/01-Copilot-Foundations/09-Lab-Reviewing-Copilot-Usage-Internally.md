@@ -152,8 +152,8 @@ A completed one page brief from the available views:
 
 ## 6. Summary
 
-&emsp;✅&emsp;Distinguish billing, activity, metrics, and audit views<br>
-&emsp;✅&emsp;Read adoption cohorts and coverage limits before drawing a conclusion<br>
-&emsp;✅&emsp;Convert signals into one concrete enablement action
+Distinguish billing, activity, metrics, and audit views<br>
+Read adoption cohorts and coverage limits before drawing a conclusion<br>
+Convert signals into one concrete enablement action
 
 **Next:** [10. Copilot Code Review](10-Lab-Copilot-Code-Review.md)

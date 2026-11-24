@@ -96,9 +96,9 @@ ctest --preset debug --output-on-failure -R preprocessing_tests
 
 ## 4. Summary
 
-&emsp;✅&emsp;Feed exact build and test output into the debug loop<br>
-&emsp;✅&emsp;Demand hypotheses and disproof commands before edits<br>
-&emsp;✅&emsp;Close with CTest, review checklist, and sanitizers where available
+Feed exact build and test output into the debug loop<br>
+Demand hypotheses and disproof commands before edits<br>
+Close with CTest, review checklist, and sanitizers where available
 
 ---
 

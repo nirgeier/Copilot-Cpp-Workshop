@@ -142,9 +142,9 @@ ctest --preset debug --output-on-failure
 
 ## Summary
 
-&emsp;✅&emsp;Separate billing, activity, metrics, and audit views<br>
-&emsp;✅&emsp;State coverage limits before interpreting a trend<br>
-&emsp;✅&emsp;Produce one evidence based enablement action
+Separate billing, activity, metrics, and audit views<br>
+State coverage limits before interpreting a trend<br>
+Produce one evidence based enablement action
 ## Solution
 
 <details class="note" markdown="1">

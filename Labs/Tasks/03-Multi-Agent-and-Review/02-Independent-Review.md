@@ -83,9 +83,9 @@ ctest --preset debug --output-on-failure
 
 ## 8. Summary
 
-&emsp;✅&emsp;Verify the reviewer tool scope before use<br>
-&emsp;✅&emsp;Triage findings against `docs/review-checklist.md`<br>
-&emsp;✅&emsp;Keep the final approval with a human
+Verify the reviewer tool scope before use<br>
+Triage findings against `docs/review-checklist.md`<br>
+Keep the final approval with a human
 
 ## Solution
 

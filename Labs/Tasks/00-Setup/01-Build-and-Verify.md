@@ -93,9 +93,9 @@ ctest --preset debug --output-on-failure
 
 ## 8. Summary
 
-&emsp;✅&emsp;Configure and build with the repository presets<br>
-&emsp;✅&emsp;Record the seeded failures as a baseline<br>
-&emsp;✅&emsp;Run the CLI and benchmark with real samples
+Configure and build with the repository presets<br>
+Record the seeded failures as a baseline<br>
+Run the CLI and benchmark with real samples
 
 ## Solution
 
