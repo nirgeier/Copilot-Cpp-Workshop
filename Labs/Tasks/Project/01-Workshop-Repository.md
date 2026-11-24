@@ -5,6 +5,16 @@
     - The repository contains build presets, a library, a CLI, Boost.Test suites, prompt files, custom agents, a skill, hooks, and recorded evidence.
     - This is the capstone task. It combines the theory and practice from every section.
 
+## Solution download
+
+The complete `mini_infer` solution is available as a single archive. It contains the
+C++17 library, CLI, Boost.Test suites, demo, Docker setup and documentation.
+
+[Download mini_infer-solution.zip](../../assets/solutions/mini_infer-solution.zip){ .md-button .md-button--primary }
+
+Regenerate the archive with `./scripts/package-solution.sh` inside `mini_infer/`. The
+script also refreshes the copy published on this site.
+
 ## 1. Task Definition
 
 | Field | Details |

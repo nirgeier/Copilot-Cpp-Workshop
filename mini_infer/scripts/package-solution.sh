@@ -38,3 +38,12 @@ rm -f "$OUT"
 
 echo "Created $OUT"
 unzip -l "$OUT" | tail -n 2
+
+# When built inside the workshop repository, also publish the archive as a
+# static file for the MkDocs site (the project task page links to it).
+DOCS_DIR="$ROOT/../Labs/assets/solutions"
+if [[ -d "$ROOT/../Labs/assets" ]]; then
+  mkdir -p "$DOCS_DIR"
+  cp "$OUT" "$DOCS_DIR/mini_infer-solution.zip"
+  echo "Published to $DOCS_DIR/mini_infer-solution.zip"
+fi
